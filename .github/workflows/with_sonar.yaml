@@ -11,20 +11,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v6
 
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarqube-scan-action@v5
-      env:
-        SONAR_TOKEN: 09dbcdbbd83980a57246cfdc5cee7be9a71b9504
-      with:
-      args: >
-        - Dsonar.projectKey=my-project-key
-        - Dsonar.organization=my-org
-
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v2
       env:
         SONAR_TOKEN: 09dbcdbbd83980a57246cfdc5cee7be9a71b9504
-        SONAR_HOST_URL: https://sonarcloud.io/
+        SONAR_HOST_URL: https://sonarcloud.io
 
     - name: Quality Gate Check
       id: quality_gate
