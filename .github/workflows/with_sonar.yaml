@@ -16,3 +16,10 @@ jobs:
       env:
         SONAR_TOKEN: 09dbcdbbd83980a57246cfdc5cee7be9a71b9504
         SONAR_HOST_URL: https://sonarcloud.io/
+
+    - name: Quality Gate Check
+        id: quality_gate
+      uses: sonarsource/sonarqube-quality-gate-action@master 
+      timeout-minutes: 5
+      env:
+          SONAR_TOKEN: 09dbcdbbd83980a57246cfdc5cee7be9a71b9504
