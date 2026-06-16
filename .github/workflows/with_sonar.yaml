@@ -18,7 +18,7 @@ jobs:
         SONAR_HOST_URL: https://sonarcloud.io/
 
     - name: Quality Gate Check
-        id: quality_gate
+      id: quality_gate
       uses: sonarsource/sonarqube-quality-gate-action@master 
       timeout-minutes: 5
       env:
